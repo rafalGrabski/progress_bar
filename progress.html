@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <button id="minus" onclick="minus()">-</button>
+        <progress id="p_bar" value="30" max="100"></progress>
+        <button id="plus" onclick="plus()">+</button>
+        <p id="info">30% Complete</p>
+
+
+    <script>
+        function plus(){
+            complete = document.getElementById('p_bar').value;
+            if (complete < 100){
+                document.getElementById('p_bar').value = complete + 10;
+                document.getElementById('info').innerHTML = document.getElementById('p_bar').value + "% Complete";
+            }
+        }
+        function minus(){
+            complete = document.getElementById('p_bar').value;
+            if (complete > 0){
+                document.getElementById('p_bar').value = complete - 10;
+                document.getElementById('info').innerHTML = document.getElementById('p_bar').value + "% Complete";
+            }
+        }
+
+
+    </script>
+    </body>
+</html>
